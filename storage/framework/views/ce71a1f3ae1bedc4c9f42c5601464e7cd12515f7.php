@@ -1,4 +1,5 @@
 <?php $__env->startSection('content'); ?>
+Pencarian : | <?php echo e(link_to('home/add_new' ,'Input baru ', ['class' => 'none'])); ?><br>
 Selamat datang di website list mahasiswa
 	<table border="1">
 		<tr bgcolor="grey">
@@ -19,7 +20,7 @@ Selamat datang di website list mahasiswa
 			<td><?php echo e(link_to('home/'.$val->id ,'Detail', ['class' => 'none'])); ?> | Ubah | Hapus</td>
 		</tr>
 		<?php } ?>
-	<table>
+	</table>
 	Total : <?php echo e($total_mahasiswa); ?> <br>
 	Halaman : 
 <?php $__env->stopSection(); ?>

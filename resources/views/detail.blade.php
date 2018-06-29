@@ -22,6 +22,6 @@ Detail mahasiswa
 			<td>:</td>
 			<td>{{ $detail_mahasiswa->jurusan }}</td>
 		</tr>
-	<table>
+	</table>
 		{{ link_to('/','Back') }}
 @stop

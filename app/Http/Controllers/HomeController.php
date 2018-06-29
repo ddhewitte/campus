@@ -17,8 +17,21 @@ class HomeController extends Controller
     }
     
     public function detail($id){
-        //get mahasiswa
+        //get mahasiswa by id
         $detail_mahasiswa = Mahasiswa::findOrFail($id); 
         return view('detail',compact('detail_mahasiswa'));
+    }
+    
+     public function add_new(){
+        return view('add'); 
+    }
+    
+    public function store(Request $request){
+        $mahasiswa = new \App\Mahasiswa;
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->alamat = $request->alamat;
+        $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->save();
+        return redirect('/');
     }
 }

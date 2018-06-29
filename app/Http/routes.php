@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('home/add_new', 'HomeController@add_new');
 Route::get('home/{home}', 'HomeController@detail');
+Route::post('home', 'HomeController@store'); //get form with post method

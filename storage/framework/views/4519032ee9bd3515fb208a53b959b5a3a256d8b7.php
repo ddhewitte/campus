@@ -1,27 +1,31 @@
 <?php $__env->startSection('content'); ?>
-Detail mahasiswa
+Tambah mahasiswa
+<?php echo Form::open(['url' => 'home']); ?>
+
 	<table border="1">
-		<tr>
-			<td>ID</td>
-			<td>:</td>
-			<td><?php echo e($detail_mahasiswa->id); ?></td>
-		</tr>
 		<tr>
 			<td>Nama</td>
 			<td>:</td>
-			<td><?php echo e($detail_mahasiswa->nama); ?></td>
+			<td><?php echo Form::text('nama'); ?></td>
 		</tr>
 		<tr>
 			<td>Alamat</td>
 			<td>:</td>
-			<td><?php echo e($detail_mahasiswa->alamat); ?></td>
+			<td><?php echo Form::text('alamat'); ?></td>
 		</tr>
 		<tr>
 			<td>Jurusan</td>
 			<td>:</td>
-			<td><?php echo e($detail_mahasiswa->jurusan); ?></td>
+			<td><?php echo Form::text('jurusan'); ?></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>:</td>
+			<td><?php echo Form::submit('input'); ?></td>
 		</tr>
 	</table>
+		<?php echo form::close(); ?>
+
 		<?php echo e(link_to('/','Back')); ?>
 
 <?php $__env->stopSection(); ?>

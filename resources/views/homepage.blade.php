@@ -1,5 +1,6 @@
 @extends('template')
 @section('content')
+Pencarian : | {{ link_to('home/add_new' ,'Input baru ', ['class' => 'none']) }}<br>
 Selamat datang di website list mahasiswa
 	<table border="1">
 		<tr bgcolor="grey">
@@ -20,7 +21,7 @@ Selamat datang di website list mahasiswa
 			<td>{{ link_to('home/'.$val->id ,'Detail', ['class' => 'none']) }} | Ubah | Hapus</td>
 		</tr>
 		<?php } ?>
-	<table>
+	</table>
 	Total : {{ $total_mahasiswa }} <br>
 	Halaman : 
 @stop
