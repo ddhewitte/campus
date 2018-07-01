@@ -24,5 +24,5 @@ Selamat datang di website list mahasiswa
 		<?php } ?>
 	</table>
 	Total : {{ $total_mahasiswa }} <br>
-	Halaman(paging) : {{ link_to('home/pagination','With paging') }}
+	<div class="paging">{{ $list_mahasiswa->links() }}</div>
 @stop

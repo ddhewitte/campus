@@ -23,7 +23,6 @@ Selamat datang di website list mahasiswa
 		<?php } ?>
 	</table>
 	Total : <?php echo e($total_mahasiswa); ?> <br>
-	Halaman(paging) : <?php echo e(link_to('home/pagination','With paging')); ?>
-
+	<div class="paging"><?php echo e($list_mahasiswa->links()); ?></div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

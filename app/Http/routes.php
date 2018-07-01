@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');//homepage
+Route::get('home/pagination', 'HomeController@index_with_pagination');//homepage with pagination
 
 
 Route::get('home/add_new', 'HomeController@add_new');//add new form

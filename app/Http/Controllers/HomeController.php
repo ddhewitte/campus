@@ -57,5 +57,12 @@ class HomeController extends Controller
 		$edit_mahasiswa->delete();
 		return redirect('/');
     }
+	
+	public function index_with_pagination(){
+        //get mahasiswa
+        $list_mahasiswa = Mahasiswa::orderBy('id','asc')->paginate(5); // pagination reguler
+        $total_mahasiswa = $list_mahasiswa->count();
+        return view('homepage_pagination',compact('list_mahasiswa', 'total_mahasiswa'));
+    }
     
 }
