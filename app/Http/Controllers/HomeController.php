@@ -50,5 +50,12 @@ class HomeController extends Controller
 		$edit_mahasiswa->update();
 		return redirect('/');
     }
+	
+	public function delete($id){
+        //get mahasiswa by id
+        $edit_mahasiswa = Mahasiswa::findOrFail($id); 
+		$edit_mahasiswa->delete();
+		return redirect('/');
+    }
     
 }

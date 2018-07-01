@@ -20,3 +20,5 @@ Route::post('home', 'HomeController@store'); //add new process
 
 Route::get('home/{id}/edit', 'HomeController@edit'); //edit form
 Route::patch('home/{id}', 'HomeController@update'); //edit process
+
+Route::get('home/{id}/hapus', 'HomeController@delete'); //hapus
