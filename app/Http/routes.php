@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('home/add_new', 'HomeController@add_new');
-Route::get('home/{home}', 'HomeController@detail');
-Route::post('home', 'HomeController@store'); //get form with post method
+Route::get('/', 'HomeController@index');//homepage
+
+
+Route::get('home/add_new', 'HomeController@add_new');//add new form
+Route::get('home/{id}', 'HomeController@detail');//detail
+Route::post('home', 'HomeController@store'); //add new process
+
+Route::get('home/{id}/edit', 'HomeController@edit'); //edit form
+Route::patch('home/{id}', 'HomeController@update'); //edit process

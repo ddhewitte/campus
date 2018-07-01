@@ -18,7 +18,7 @@ Selamat datang di website list mahasiswa
 			<td>{{ $val->alamat }}</td>
 			<td>{{ $val->jurusan }}</td>
 			<td>{{ $val->foto }}</td>
-			<td>{{ link_to('home/'.$val->id ,'Detail', ['class' => 'none']) }} | Ubah | Hapus</td>
+			<td>{{ link_to('home/'.$val->id ,'Detail', ['class' => 'none']) }} | {{ link_to('home/'.$val->id.'/edit' ,'Ubah', ['class' => 'none']) }} | Hapus</td>
 		</tr>
 		<?php } ?>
 	</table>

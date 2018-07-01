@@ -17,7 +17,7 @@ Selamat datang di website list mahasiswa
 			<td><?php echo e($val->alamat); ?></td>
 			<td><?php echo e($val->jurusan); ?></td>
 			<td><?php echo e($val->foto); ?></td>
-			<td><?php echo e(link_to('home/'.$val->id ,'Detail', ['class' => 'none'])); ?> | Ubah | Hapus</td>
+			<td><?php echo e(link_to('home/'.$val->id ,'Detail', ['class' => 'none'])); ?> | <?php echo e(link_to('home/'.$val->id.'/edit' ,'Ubah', ['class' => 'none'])); ?> | Hapus</td>
 		</tr>
 		<?php } ?>
 	</table>
